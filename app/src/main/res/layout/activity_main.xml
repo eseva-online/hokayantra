@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="online.eseva.hokayantra.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="889dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/wood"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <online.eseva.hokayantra.ui.GujaratiFontRegular
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:text="ઉત્તર"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/yantraBorderImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <online.eseva.hokayantra.ui.GujaratiFontRegular
+        android:id="@+id/info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="354º"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
+
+    <ImageView
+        android:id="@+id/yantraBorderImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:maxWidth="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/yantra_border" />
+
+    <ImageView
+        android:id="@+id/yantraContentImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_full_round"
+        android:contentDescription="Hokayantra Back"
+        android:maxWidth="330dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/yantra_back" />
+
+    <xyz.hanks.library.bang.SmallBangView
+        android:id="@+id/bangImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/yantraContentImage"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/yantraContentImage">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/yantraNeedleImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:maxHeight="320dp"
+                android:maxWidth="320dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                app:srcCompat="@drawable/needle" />
+
+            <com.qhutch.bottomsheetlayout.BottomSheetLayout
+                android:id="@+id/bottomSheetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/colorPrimary"
+                android:padding="16dp"
+                app:collapsedHeight="60dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/indicatorArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_keyboard_arrow"
+                        android:tint="@color/white" />
+
+                    <online.eseva.hokayantra.ui.GujaratiFontRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/indicatorArrow"
+                        android:text="વધુ જુઓ"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/infoArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_info"
+                        android:tint="@color/white" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/indicatorArrow"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/moreAppsWrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/white_rounded"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/more_apps_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_touch_app_black_24dp"
+                                android:tint="@color/colorPrimary" />
+
+                            <online.eseva.hokayantra.ui.GujaratiFontRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/more_apps_icon"
+                                android:text="@string/more_apps"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_arrow_forward"
+                                android:tint="@color/colorPrimary" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rateUsWrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/white_rounded"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/rate_us_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_star_black_24dp"
+                                android:tint="@color/colorPrimary" />
+
+                            <online.eseva.hokayantra.ui.GujaratiFontRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/rate_us_icon"
+                                android:text="@string/rate_us"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_arrow_forward"
+                                android:tint="@color/colorPrimary" />
+
+                        </RelativeLayout>
+
+                        <!-- Know About Hokayantra -->
+                        <RelativeLayout
+                            android:id="@+id/aboutHokayantraWrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/white_rounded"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/hokayantra_icon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_info"
+                                android:tint="@color/colorPrimary" />
+
+                            <online.eseva.hokayantra.ui.GujaratiFontRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/hokayantra_icon"
+                                android:text="@string/know_about_hokayantra"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_arrow_forward"
+                                android:tint="@color/colorPrimary" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </com.qhutch.bottomsheetlayout.BottomSheetLayout>
+
+        </RelativeLayout>
+
+
+    </xyz.hanks.library.bang.SmallBangView>
+
+
+</android.support.constraint.ConstraintLayout>
