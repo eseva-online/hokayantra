@@ -2,7 +2,7 @@
 
 Android Application which display direction in Gujarati using gyroscope sensor of the device.
 
-
+![hokayantra screenshot](art/screenshot-1.png)
 
 ## How to build
 
