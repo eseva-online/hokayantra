@@ -9,10 +9,9 @@ Android Application which display direction in Gujarati using gyroscope sensor o
 Clone the repo. to local folder, open Android Studio and import the project.
 
 
-
 ### LICENCE
 
-Read the LICENCE file included in project.
+User this project whatever way you like but you need to republish it online with same LICENSE, Read the [LICENCE](LICENSE) file included in project for more information.
 
 
 ### Contact
